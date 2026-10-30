@@ -21,7 +21,7 @@ public class BTT3
         System.out.print("Nhap don gia: ");
         double donGia = sc.nextDouble();
 
-        System.out.print("Nhap nam soLuong: ");
+        System.out.print("Nhap so luong: ");
         int soLuong = sc.nextInt();
 
         double thanhTien = donGia * soLuong;
@@ -40,6 +40,70 @@ public class BTT3
         System.out.println("Thanh tien: " + thanhTien);
         System.out.println("Phi van chuyen: " + phiVanChuyen);
         System.out.println("Tong tien nhap: " + tongTien);
+
+        if (donGia > 0 && soLuong > 0 && namXuatBan > 0 && namXuatBan < 2027)
+        {
+            System.out.println("Sach hop le");
+        }
+        else
+        {
+            System.out.println("Sach khong hop le");
+        }
+
+        if (donGia < 50000) {
+            System.out.println("Sach gia thap");
+        }
+        else if (donGia <= 100000) {
+            System.out.println("Sach gia trung binh");
+        }
+        else if (donGia <= 200000) {
+            System.out.println("Sach gia cao");
+        }
+        else {
+            System.out.println("Sach gia dac biet");
+        }
+
+        if (soLuong == 0) {
+            System.out.println("Het sach");
+        }
+        else if (soLuong <= 5) {
+            System.out.println("Sach sap het");
+        }
+        else if (soLuong <= 20) {
+            System.out.println("Sach con it");
+        }
+        else {
+            System.out.println("Sach con nhieu");
+        }
+
+        System.out.println("1. Sach giao khoa");
+        System.out.println("2. Sach tham khao");
+        System.out.println("3. Sach chuyen nganh");
+        System.out.println("4. Sach khac");
+
+        System.out.print("Chon loai sach: ");
+        int loaiSach = sc.nextInt();
+
+        switch (loaiSach) {
+            case 1:
+                System.out.println("Sach giao khoa");
+                break;
+
+            case 2:
+                System.out.println("Sach tham khao");
+                break;
+
+            case 3:
+                System.out.println("Sach chuyen nganh");
+                break;
+
+            case 4:
+                System.out.println("Sach khac");
+                break;
+
+            default:
+                System.out.println("Lua chon khong hop le");
+        };
 
         sc.close();
     }
